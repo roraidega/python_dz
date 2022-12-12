@@ -1,20 +1,16 @@
-class Man():
-    def makesound(self):
-        print('Имитирует кряканье')
+from task1 import Account
 
-    def clother(self):
-        print('Человек в одежде')
 
-class Duck():
-    def makesound(self):
-        print('Крякает')
+def main():
+    account = Account('renata', 700, '1234567890', 'admin')
+    account.set_passport('09876532', 'ohohohohoh')
+    account.set_passport('09876532', 'admin')
+    account.change_balance(300)
+    account.change_balance(-5000)
+    try:
+        account.del_passport('admin')
+    except:
+        print('Паспорт был удален!!!')
 
-    def clother(self):
-        print('Утка в шляпе')
 
-person = Man()
-animal = Duck()
-
-for smth in(person, animal):
-    smth.makesound()
-    smth.clother()
+main()
