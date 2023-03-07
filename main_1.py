@@ -1,12 +1,11 @@
-import sys
+"""
+Создайте программу выводящую информацию о системе вида:
+Операционная система - ХХХ
+Имя компьютера - ХХХ
+Имя пользователя - ХХХ
+"""
 
-input_ = sys.argv
-
-if not '--name' in input_:
-    print('Привет мир')
-else:
-    name = ''
-    for i in input_:
-        if i == '--name':
-            name = input_[input_.index(i) + 1]
-    print(f'Привет, {name}')
+import os
+print("Операционная система - " + os.name)
+print('Имя компьютера - ' + os.environ.get('COMPUTERNAME'))
+print("Имя пользователя - " + os.environ.get('USERNAME'))

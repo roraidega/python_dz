@@ -1,6 +1,10 @@
-import sys
+""" напишите программу которая создает папку task4 и записывает текст "я выполнил задание" в файл answer.txt
+"""
 
-input_ = sys.stdin
+import os
 
-if sys.argv[1] == 'sys.in':
-    print('команда принята')
+os.mkdir(r"C:\Users\Рената\OneDrive\Рабочий стол\Бабчёнок Олег\target")
+os.chdir(r"C:\Users\Рената\OneDrive\Рабочий стол\Бабчёнок Олег\target")
+
+for i in range(1, 11):
+    os.mkdir(f"{i}")
