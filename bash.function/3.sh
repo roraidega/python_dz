@@ -6,7 +6,7 @@
 
 #!/bin/bash
 
-source 3.sh
+source check.sh
 
 echo "Введите количество учеников:"
 read num_students
