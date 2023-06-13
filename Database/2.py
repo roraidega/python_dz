@@ -53,7 +53,7 @@ with Session(autoflush=False, bind=engine) as db:
 
 
     user_input = input()
-    users_db = db.query(User).filter(User.name == user_input).all()
+    users_db = db.query(User).filter(User.name == user_input).all() #получаем список объектов модели User
     for i in users_db:
         for j in i.user_post:
             print(j.name)
