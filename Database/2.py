@@ -61,7 +61,7 @@ with Session(autoflush=False, bind=engine) as db:
     user_input = input()
     users_db = db.query(User).filter(User.experience >= 5).all()
     for i in users_db:
-        for j in i.user_post:
+        for j in i.user_post:   # цикл по списку связанных объектов модели User_post для текущего объекта модели User
             if j.name == user_input:
                 print(i.name)
 
