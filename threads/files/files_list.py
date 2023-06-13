@@ -26,7 +26,7 @@ start_time = time.time()
 
 # Запускаем функцию replace_id для каждого файла в отдельном потоке
 for file_name in files_list:
-    file_path = os.path.join(files_dir, file_name)
+    file_path = os.path.join(files_dir, file_name) #формируем путь
     thread = Thread(target=replace_id, args=(file_path,))
     thread.start()
     threads.append(thread)
