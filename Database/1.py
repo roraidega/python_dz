@@ -44,7 +44,7 @@ def get_info():
 
 def delete(id_del):
      with Session(autoflush=False, bind=engine) as bd:
-        kill = bd.query(Films).filter(Films.id==id_del).first()
+        kill = bd.query(Films).filter(Films.id==id_del).first() #получаем первую запись из таблицы 
         bd.delete(kill)
         bd.commit()
 
