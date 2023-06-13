@@ -10,7 +10,7 @@ class Base(DeclarativeBase):
     pass
 
 asocciation_table = Table('asocciation_table', Base.metadata,
-                          Column('user_post_id', Integer, ForeignKey('user_post.id')),
+                          Column('user_post_id', Integer, ForeignKey('user_post.id')), #создаем таблицу связей между
                           Column('user_id', Integer, ForeignKey('user.id')))
 
 class User_post(Base):
