@@ -18,7 +18,8 @@ taxi_payment() {
     local remaining_distance=$(bc <<< "$distance - 0.14")
     local fare=$(bc <<< "0.25 * ($distance / 0.14) + 4.00")
 
-    local recursive_payment=$(taxi_payment $remaining_distance)
+    local recursive_payment=$(taxi_payment $remaining_distance) #вызываем taxi_payment с передачей ей аргумента remaining_distance
+
 
     echo "$(bc <<< "$fare + $recursive_payment")"
 }
