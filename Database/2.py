@@ -3,7 +3,7 @@ from sqlalchemy import Column, Integer, String, ForeignKey, Table
 from sqlalchemy.orm import DeclarativeBase, Session, relationship
 
 sql_database = "sqlite:///User_prof.db"
-engine = create_engine(sql_database)
+engine = create_engine(sql_database) #движок
 
 
 class Base(DeclarativeBase):
