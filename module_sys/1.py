@@ -8,5 +8,5 @@ else:
     name = ''
     for i in input_:
         if i == '--name':
-            name = input_[input_.index(i) + 1]
+            name = input_[input_.index(i) + 1] #присваиваем значение следующего элемента списка
     print(f'Привет, {name}')
