@@ -46,7 +46,8 @@ with Session(autoflush=False, bind=engine) as db:
     people_1 = User(name="Yana", experience = 20)
     people_2 = User(name="Ignat", experience = 21)
     people_3 = User(name="Nikita", experience = 22)
-    people_1.user_post.append(user_post_1)
+    people_1.user_post.append(user_post_1) # добавляем связь между объектами моделей User и User_post
+
     db.add_all([people_1, people_2, people_3])
     db.commit()
 
