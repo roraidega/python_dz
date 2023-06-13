@@ -33,5 +33,5 @@ bs = BeautifulSoup(page.content, features='lxml')
 
 for headers in bs.find_all('div', attrs={'class': 'position-relative'}):
 
-    if '^[h\d]' in headers:
+    if '^[h\d]' in headers: #проверяем, содержит ли элемент заголовок
         print(headers)
